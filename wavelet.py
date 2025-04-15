@@ -17,11 +17,11 @@ B = wave.open(b, 'rb')
 C = wave.open(c, 'rb')
 D = wave.open(d, 'rb')
 
-drugz = [a,b,c,d,b,c,d,b,c,d,b,c,d,b,c,d,a]
+bits = [a,b,c,d,b,c,d,b,c,d,b,c,d,b,c,d,a]
 
 data= []
-for drug in drugz:
-    w = wave.open(drug, 'rb')
+for bit in bits:
+    w = wave.open(bit, 'rb')
     # print(w.getparams())
     data.append( [w.getparams(), w.readframes(w.getnframes())] )
     w.close()
